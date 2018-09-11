@@ -1,0 +1,14 @@
+<div class ="center">
+  <h1>以下の内容で送信する</h1>
+  
+  <%= form_with(model: @murmur,url: murmurs_path,local: true ) do |form| %>
+    <%= form.hidden_field :content %>
+    <p>つぶやき内容:<%= @murmur.content %></p>
+    <%= form.submit  "登録する" %>
+  <% end %>
+  
+  <%= form_with(model: @murmur, url: new_murmur_path, local: true, method: 'get') do |form| %>
+    <%= form.hidden_field :content %>
+    <%= form.submit "もどる", name: 'back' %>
+  <% end %>
+</div>

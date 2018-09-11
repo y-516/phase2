@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Phase2app</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header class ="header clearfix">
+        <ul>
+        <li><a href="/">top</a></li>
+        <li><a href="/murmurs">一覧</a></li>
+        <li><a href = "/murmurs/new">登録</a></li>
+        </ul>
+    </header>
+    <%= yield %>
+    <footer class ="footer">
+      <p>PHASE2_application</p>
+    </footer>
+  </body>
+</html>
